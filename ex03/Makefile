@@ -5,7 +5,7 @@ GREEN = \033[0;32m
 NC = \033[0m
 
 CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98 -I includes
+CFLAGS = -Wall -Werror -Wextra -std=c++98 -I include
 
 SRC_DIR = src/
 OBJ_DIR = obj/

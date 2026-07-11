@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gyasuhir <gyasuhir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gyasuhir <gyasuhir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/05 19:39:07 by codespace         #+#    #+#             */
-/*   Updated: 2026/07/05 20:00:06 by gyasuhir         ###   ########.fr       */
+/*   Updated: 2026/07/11 12:08:36 by gyasuhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/Bureaucrat.hpp"
+#include "../include/Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(void) : _name("nameless"), _grade(150) {
+Bureaucrat::Bureaucrat(void) : _name("No name"), _grade(150) {
     std::cout << "A default bureaucrat has been created." << std::endl;
 }
 
@@ -55,7 +55,7 @@ void    Bureaucrat::incrementGrade(void) {
 }
 
 void    Bureaucrat::decrementGrade(void) {
-    if (grade_ >= LOWEST_GRADE)
+    if (_grade >= LOWEST_GRADE)
         throw GradeTooHighException();
     _grade++;
 }
